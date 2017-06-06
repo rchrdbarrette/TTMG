@@ -10,3 +10,9 @@ TTMG Status
 	game board set up
 	tiles set up
 	materials set up and attached
+	git repository created
+	solution checked in
+	created daily status and goals docs
+	added cursor
+	added playerinput script to control cursor
+	
