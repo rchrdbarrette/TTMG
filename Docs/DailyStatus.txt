@@ -1,0 +1,12 @@
+TTMG Status
+
+6/5
+	installed unity
+	created project
+	tutorials 1,2 completed
+	project created
+	
+6/6
+	game board set up
+	tiles set up
+	materials set up and attached
