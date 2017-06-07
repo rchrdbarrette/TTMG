@@ -1,12 +1,12 @@
 TTMG Status
 
-6/5
+6/4
 	installed unity
 	created project
 	tutorials 1,2 completed
 	project created
 	
-6/6
+6/5
 	game board set up
 	tiles set up
 	materials set up and attached
@@ -15,4 +15,12 @@ TTMG Status
 	created daily status and goals docs
 	added cursor
 	added playerinput script to control cursor
+	
+6/6 
+	replaced cursor with rigidbody sphere
+	adjusted playfield and cursor in view
+	made tiles children of background
+	added mouse input force control on the sphere cursor
+	researched quad detection by raycasting
+	tutorial 3 completed
 	
