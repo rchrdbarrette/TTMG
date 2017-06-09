@@ -24,3 +24,19 @@ TTMG Status
 	researched quad detection by raycasting
 	tutorial 3 completed
 	
+6/7
+	tutorials 3,4,5 completed
+	download and install of oculus VR plugins for unity
+	jdk/apk etc. updated and installed, configured in unity correctly
+	placed cursor sphere, attached player input scripts
+	made it move via mouse, but it's not right
+	
+6/8
+	N/A
+	
+6/9
+	replaced mouse movement with controller/keyboard movement
+	added ovr camera, replaced main camera
+	more configuration for oculus in unity
+	successfully built, pushed and ran on my GearVR!  WOOT
+	
