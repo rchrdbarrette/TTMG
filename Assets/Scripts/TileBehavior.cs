@@ -22,7 +22,6 @@ public class TileBehavior : MonoBehaviour
 		Debug.Log("Hit on Tile...");
 
 		// lets change the color first, then animate a disappering act
-		// _renderer.material.shader = Shader.Find("Albedo");
-		_renderer.material.SetColor("_Color", Color.yellow);
+		_renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
 	}
 }
