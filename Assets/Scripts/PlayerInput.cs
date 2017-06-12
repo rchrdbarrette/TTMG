@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
 	private Rigidbody _cursor;
-	private AudioSource _audio;
 	private bool _cursorClicked = false;
 	private bool _cursorReturning = false;
 	public int Speed = 10;
@@ -17,7 +16,6 @@ public class PlayerInput : MonoBehaviour
 	void Start()
 	{
 		_cursor = GetComponent<Rigidbody>();
-		_audio = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -25,9 +23,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("space"))
 		{
-			Debug.Log("Fire!");
 			_cursorClicked = true;
-			// bounce the cursor against the tile
 		}
 	}
 
@@ -38,18 +34,17 @@ public class PlayerInput : MonoBehaviour
 		float moveVertical = Input.GetAxis("Vertical");
 		Vector3 position = _cursor.transform.position;
 
+		position.x += moveHorizontal * Speed * Time.deltaTime;
+		position.y += moveVertical * Speed * Time.deltaTime;
+
 		// move the cursor around by keyboard or controller
 		if (_cursorClicked)
 		{
-			position.x += moveHorizontal * Speed * Time.deltaTime;
-			position.y += moveVertical * Speed * Time.deltaTime;
 			position.z += 0.1f * BounceSpeed * Time.deltaTime;
 			_cursor.transform.position = position;
 		}
 		else if (_cursorReturning)
 		{
-			position.x += moveHorizontal * Speed * Time.deltaTime;
-			position.y += moveVertical * Speed * Time.deltaTime;
 			position.z += -0.1f * BounceSpeed * Time.deltaTime;
 			_cursor.transform.position = position;
 
@@ -60,8 +55,6 @@ public class PlayerInput : MonoBehaviour
 		}
 		else
 		{
-			position.x += moveHorizontal * Speed * Time.deltaTime;
-			position.y += moveVertical * Speed * Time.deltaTime;
 			_cursor.transform.position = position;
 		}
 	}
@@ -69,18 +62,8 @@ public class PlayerInput : MonoBehaviour
 	void OnCollisionEnter(Collision collision)
 	{
 		Debug.Log("OnCollisionEnter called...");
-
-		// _audio.Play();
 		_cursorReturning = true;
 		_cursorClicked = false;
-		// check tile hit, change color if hit
-
-		/*
-		foreach (ContactPoint contact in collision.contacts)
-		{
-			Debug.DrawRay(contact.point, contact.normal, Color.white);
-		}
-		*/
 	}
 
 }
