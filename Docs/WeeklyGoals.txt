@@ -15,4 +15,16 @@ Week 6/5 - 6/9:
 	
 Week 6/12 - 6/16
 
-	1. 
+	T. Review physics training on https://unity3d.com/learn/tutorials/topics/physics/colliders?playlist=17120
+	1. Make the sphere cursor "bounce" against a tile when clicked
+	2. Make the tile that is clicked react
+	3. Set up rules engine for matching tiles (details needed here)
+	4. Sketch out notes for all 4 games (zen, speed, majongg and color match)
+	5. Make a sound play when the tile is hit
+	
+	Stretch:
+	
+	1. Make 2 tiles disappear when correctly matched
+	
+Week 6/18 - 23
+	

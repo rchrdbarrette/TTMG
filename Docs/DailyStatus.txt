@@ -40,3 +40,12 @@ TTMG Status
 	more configuration for oculus in unity
 	successfully built, pushed and ran on my GearVR!  WOOT
 	
+6/12
+	Reviewed collision tutorials
+	updated cursor script to react on click
+	animated the cursor so it looks like it "bounces" against the tiles
+	updated both the cursor and tile scripts to handle the collision event
+	collision events wired and firing
+	animated the cursor so that after a collision, it "bounces" back to the resting cursor position above the board
+	added audio source, need file sound (and a good mixing program)
+	
