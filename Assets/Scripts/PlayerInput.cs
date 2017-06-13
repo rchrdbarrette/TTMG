@@ -2,13 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // ReSharper disable once CheckNamespace
 public class PlayerInput : MonoBehaviour
 {
 	private Rigidbody _cursor;
+	private AudioSource _cursorHit;
 	private bool _cursorClicked = false;
 	private bool _cursorReturning = false;
+	private int _hitCount = 0;
+	public Text HitCounterText;
 	public int Speed = 10;
 	public int BounceSpeed = 250;
 
@@ -16,6 +20,7 @@ public class PlayerInput : MonoBehaviour
 	void Start()
 	{
 		_cursor = GetComponent<Rigidbody>();
+		_cursorHit = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -37,7 +42,6 @@ public class PlayerInput : MonoBehaviour
 		position.x += moveHorizontal * Speed * Time.deltaTime;
 		position.y += moveVertical * Speed * Time.deltaTime;
 
-		// move the cursor around by keyboard or controller
 		if (_cursorClicked)
 		{
 			position.z += 0.1f * BounceSpeed * Time.deltaTime;
@@ -62,6 +66,9 @@ public class PlayerInput : MonoBehaviour
 	void OnCollisionEnter(Collision collision)
 	{
 		Debug.Log("OnCollisionEnter called...");
+		_cursorHit.Play();
+		_hitCount++;
+		HitCounterText.text = _hitCount.ToString();
 		_cursorReturning = true;
 		_cursorClicked = false;
 	}

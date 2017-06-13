@@ -21,6 +21,8 @@ Week 6/12 - 6/16
 	3. Set up rules engine for matching tiles (details needed here)
 	4. Sketch out notes for all 4 games (zen, speed, majongg and color match)
 	5. Make a sound play when the tile is hit
+	6. Find and add some background music
+	7. Add a score element
 	
 	Stretch:
 	

@@ -43,7 +43,7 @@ TTMG Status
 6/12
 	Reviewed collision tutorials
 	updated cursor script to react on click
-	animated the cursor so it looks like it "bounces" against the tiles
+	animated the cursor so it looks like it "bounces" down against the tiles
 	updated both the cursor and tile scripts to handle the collision event
 	collision events wired and firing
 	animated the cursor so that after a collision, it "bounces" back to the resting cursor position above the board
@@ -53,4 +53,13 @@ TTMG Status
 	
 6/13
 	Review audio tutorials
+	Review and find a decent audio mixing program
+	installed Audacity, free open-source audio editor
+	created inital "puck" sound effect for when the cursor hits a tile
+	attached hit sound to cursor
+	found decent free background music to start with, attached to camera on autoplay
+	added canvas and uitext elements to display a score
+	need to review how the VR elements in ui are different from regular (world space vs. overlay)
+	score shows up but it looks like crap
+	
 	
